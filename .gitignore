@@ -1,0 +1,6 @@
+# Datos de prueba generados por el programa
+expedientes.txt
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
