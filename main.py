@@ -3,7 +3,7 @@
 # Curso: Fundamentos de Programación (CIIN1205P)
 
 from datetime import datetime
-from validaciones import validar_documento, validar_folios
+from validaciones import validar_documento, validar_folios, validar_correo, validar_telefono
 from archivos import guardar_expedientes, cargar_expedientes
 
 # ---------------------------------------------------------------------------
@@ -56,6 +56,15 @@ def registrar_expediente():
         print("[ERROR]", mensaje)
         return
     ok, mensaje, folios = validar_folios(folios_texto)
+    if not ok:
+        print("[ERROR]", mensaje)
+        return
+
+    ok, mensaje = validar_correo(correo)
+    if not ok:
+        print("[ERROR]", mensaje)
+        return
+    ok, mensaje = validar_telefono(telefono)
     if not ok:
         print("[ERROR]", mensaje)
         return
