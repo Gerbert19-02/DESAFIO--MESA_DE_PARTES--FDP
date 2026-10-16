@@ -3,7 +3,7 @@
 # Curso: Fundamentos de Programación (CIIN1205P)
 
 from datetime import datetime
-from validaciones import validar_documento, validar_folios, validar_correo, validar_telefono
+from validaciones import validar_documento, validar_folios
 from archivos import guardar_expedientes, cargar_expedientes
 
 # ---------------------------------------------------------------------------
@@ -59,16 +59,7 @@ def registrar_expediente():
     if not ok:
         print("[ERROR]", mensaje)
         return
-
-    ok, mensaje = validar_correo(correo)
-    if not ok:
-        print("[ERROR]", mensaje)
-        return
-    ok, mensaje = validar_telefono(telefono)
-    if not ok:
-        print("[ERROR]", mensaje)
-        return
-
+        
     # Código y fecha
     codigo = generar_codigo(len(lista_codigos))
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
