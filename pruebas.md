@@ -1,1 +1,0 @@
-Integrante: Piero Claudio Villanueva
