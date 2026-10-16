@@ -37,36 +37,3 @@ def validar_folios(texto):
     return True, "", folios
 
 
-def validar_correo(correo):
-    """
-    Revisa que el correo tenga un formato básico: texto@dominio.ext
-    Devuelve (True, "") si está bien, o (False, mensaje) si hay error.
-    """
-    correo = correo.strip()
-
-    if " " in correo:
-        return False, "El correo no debe tener espacios."
-    if correo.count("@") != 1:
-        return False, "El correo debe tener un solo @."
-    usuario, dominio = correo.split("@")
-    if usuario == "":
-        return False, "Falta el texto antes del @."
-    if "." not in dominio or dominio.startswith(".") or dominio.endswith("."):
-        return False, "El dominio del correo no es válido (ejemplo: gmail.com)."
-    return True, ""
-
-
-def validar_telefono(telefono):
-    """
-    Revisa el celular: 9 dígitos, solo números, y que empiece con 9.
-    Devuelve (True, "") si está bien, o (False, mensaje) si hay error.
-    """
-    telefono = telefono.strip()
-
-    if not telefono.isdigit():
-        return False, "El teléfono debe tener solo números."
-    if len(telefono) != 9:
-        return False, "El teléfono debe tener 9 dígitos."
-    if telefono[0] != "9":
-        return False, "El celular debe empezar con 9."
-    return True, ""
