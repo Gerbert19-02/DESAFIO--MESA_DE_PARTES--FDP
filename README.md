@@ -1,3 +1,4 @@
+
 \# Mesa de Partes Digital
 
 
@@ -42,7 +43,19 @@ Curso: Fundamentos de Programación (CIIN1205P), UPN. Grupo 5.
 
 2\. Buscar expediente por código
 
+
+
 3\. Ordenar expedientes por código
 
 4\. Salir
+
+## Integrantes
+
+- Lenin Levit Ruiz Irigoin
+- Gerbert Alvarado García
+- Piero Claudio Villanueva
+- Christopher López Ludeña
+- Johan Romero Cahuana
+
+Docente: Jorge Luis Córdova Lopez
 
