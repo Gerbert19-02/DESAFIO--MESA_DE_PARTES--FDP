@@ -9,7 +9,7 @@ POSICION_FOLIOS = 10  # lugar de la lista de folios dentro de "listas"
 def guardar_expedientes(listas):
     """
     Guarda todos los expedientes en el archivo de texto.
-    'listas' es el grupo de listas paralelas (código, fecha, tipo de persona...).
+    'listas' es el grupo de listas paralelas (código, fecha, tipo de persona..).
     Cada línea del archivo es un expediente.
     """
     cantidad = len(listas[0])
